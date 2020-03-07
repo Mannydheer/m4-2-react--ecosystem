@@ -98,20 +98,22 @@ Convert the following inline styles to styled-components
 }
 
 ```
-
-
 ```jsx
+import styled from 'styled-components';
+
 function App(props) {
   return (
-    <div className="wrapper">
+    const StyledWrapper = styled.div`
+    margin: 0 auto;
+    height: 300px;
+    `;
+    <StyledWrapper className="wrapper">
       Hello World
-    </div>
+    </StyledWrapper>
   )
 }
 ```
-
 ---
-
 ### Exercise #2
 
 ```css
@@ -133,14 +135,36 @@ function App(props) {
 ```
 
 ```jsx
+import styled from 'styled-compoenents';
+
 function IconButton(props) {
   return (
-    <button className="btn">
-      <i className="icon">
+const StyledBtn = styled.button`
+  color: tomato;
+  font-weight: bold;
+  padding: 20px;
+
+  &:hover, &:focus {
+      transform: translateY(-3px);
+  }
+
+  .icon {  
+  width: 32px;
+  height: 32px;
+
+  }
+`;
+//CAN ALSO DO THIS OR BECAUSE ITS A CHILD DIRECTLY ABOVE. BUT YOU NEED TO LEAVE THE CLASS NAME
+// const StyledIcons = styled.i`
+//   width: 32px;
+//   height: 32px;
+// `;
+    <StyledBtn>
+      <StyledIcons>
         {props.icon}
-      </i>
+      </StyledIcons>
       {props.children}
-    </button>
+    </StyledBtn>
   )
 }
 ```

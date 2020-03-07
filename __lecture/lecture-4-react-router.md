@@ -45,7 +45,7 @@ What gets rendered in the following snippets?
   <Route exact={true} path="/">
     Home
   </Route>
-  <Route path="/about">
+  <Route path="/about"> //render whats inside here.
     About
   </Route>
 </div>
@@ -57,7 +57,7 @@ Current URL: http://localhost:3000/about
 
 ```jsx
 <div>
-  <Route path="/items/:itemId">
+  <Route path="/items/:itemId"> //here
     Item detail page
   </Route>
   <Route path="/items">
@@ -95,7 +95,6 @@ import {
 function App(props) {
   return (
     <Router>
-      <div>
         <Switch>
           <Route exact path="/">
             <Homepage />
@@ -107,7 +106,6 @@ function App(props) {
             <ErrorPage />
           </Route>
         </Switch>
-      </div>
     </Router>
   )
 }
@@ -120,6 +118,7 @@ export default App;
 # Link
 
 Use the provided `<Link>` component to get from one route to another.
+//preserve data with Link, it will just directly take us there whereas ahref will RELOAD THE PAGE. 
 
 ```jsx
 import { Link } from 'react-router-dom';
@@ -139,7 +138,7 @@ Why use `<Link to="...">` instead of `<a href="...">`?
 
 # Question
 
-Is this "real" navigation?
+Is this "real" navigation? YES
 
 ---
 

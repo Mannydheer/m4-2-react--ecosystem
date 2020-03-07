@@ -14,6 +14,7 @@ import React from 'react';
 const App = ({ user, data }) => {
   // Error:
   return (
+    //can only return 1 thing, but solN is to wrap it in another DIV
     <Header user={user} />
     <Content data={data} />
   )
