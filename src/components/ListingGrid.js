@@ -32,6 +32,9 @@ font-size: 20px;
 font-weight: bold;
 display: inline-grid;
 grid-template-rows: auto auto auto;
+box-shadow: 0px 21px 34px -9px rgb(63,78,118);
+border-radius: 25px;
+
 
 `
 const ItemName = styled.span`

@@ -65,6 +65,7 @@ grid-gap: 20px;
 position: absolute;
 top: 30%;
 right: 30%;
+
 `
 const StyledImg = styled.img`
 width: 500px;
