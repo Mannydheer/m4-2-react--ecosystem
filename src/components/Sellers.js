@@ -2,9 +2,17 @@ import React from 'react';
 import {sellers} from '../data'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useHistory} from "react-router";
+
 
 
 const Sellers = () => {
+    const history = useHistory();
+
+    const goBack = () => {
+        history.goBack();
+
+    }
 
     let listSellers = Object.values(sellers);
 
@@ -17,6 +25,8 @@ const Sellers = () => {
                 )
             })
                }
+        <Back onClick={goBack}>Back</Back>
+
     </DivImage>
 
       
@@ -46,4 +56,18 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 height: 100vh;
+`
+const Back = styled.button`
+border-radius: 25px;
+background-color:purple;
+color: white;
+transition: 0.2s ease all;
+padding: 30px;
+
+
+&:hover {
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+}
 `

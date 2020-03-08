@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 //ADD PROPS
 
 const ListingGrid = (itemData) => {
+
+
     return (
     <StyledProduct>
         <ItemName>{itemData.name}</ItemName>

@@ -17,16 +17,15 @@ import {items} from "../data";
 function App(props) {
   console.log(props)
   return (
-    <BrowserRouter>
+<BrowserRouter>
      <GlobalStyles/>
 
     <div>
-        <Header></Header>
+      <Header></Header>
       <Switch>
         <Route exact path="/"><Home data={items}></Home></Route>
         <Route exact path="/about"><About></About></Route>
         <Route exact path="/sellers"><Sellers></Sellers></Route>
-
         <Route exact path="/sellers/:name"><SellerDescription></SellerDescription></Route>
         <Route exact path="/items/:itemId"><ItemDetails></ItemDetails></Route>
         <Route exact path="/order/:itemId"><Order></Order></Route>
@@ -36,7 +35,7 @@ function App(props) {
 
 
      
-    </BrowserRouter>
+</BrowserRouter>
 
 
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { items, sellers } from '../data';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
+
 
 const ItemDetails = () => {
 
@@ -9,6 +11,12 @@ const {itemId} = useParams();
 //get the item from the itemID. 
 let item = (items[itemId]);
 let seller = sellers[item.sellerId]
+const history = useHistory();
+
+    const goBack = () => {
+        history.goBack();
+
+    }
 
 
 
@@ -30,6 +38,8 @@ let seller = sellers[item.sellerId]
             <StoreName>Sold By:{seller.storeName}</StoreName>
            
         </SellerInfo>
+        <Back onClick={goBack}>Back</Back>
+
 
             
     </Text> 
@@ -123,4 +133,18 @@ padding: 20px 20px 20px 0;
 `
 const StoreName = styled.span`
 font-size: 20px;
+`
+
+const Back = styled.button`
+border-radius: 25px;
+background-color:purple;
+color: white;
+transition: 0.2s ease all;
+
+
+&:hover {
+    background-color: pink;
+    color: purple;
+    cursor: pointer;
+}
 `
